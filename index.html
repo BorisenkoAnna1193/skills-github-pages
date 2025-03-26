@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя страница</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Заголовок страницы</h1>
+        <p>Краткое описание страницы</p>
+
+        <h2>Расскажи мне свой сон</h2>
+        <textarea id="dreamInput" maxlength="6000" placeholder="Введите текст вашего сна..."></textarea>
+        <button type="button" onclick="submitDream()">Отправить</button>
+    </div>
+
+    <script>
+        function submitDream() {
+            let dreamText = document.getElementById("dreamInput").value;
+            // Здесь можно добавить код для отправки сна на сервер
+            console.log("Сон отправлен:", dreamText);
+        }
+    </script>
+</body>
+</html>
